@@ -1,6 +1,5 @@
 <?php
-function is_str_all_lowercase($text)
-{
+function is_str_all_lowercase($text) {
     for ($sc = 0; $sc < strlen($text); $sc++) {
         if (ord($text[$sc]) >= ord('A') && ord($text[$sc]) <= ord('Z')) {
             return false; //an uppercase character is detected
