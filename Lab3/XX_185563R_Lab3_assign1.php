@@ -22,7 +22,7 @@ function num_uppercase($text)
 
 $text1 = "Open Source Web Solutions Development";
 if (num_uppercase($text1)) {
-    echo $text1 . " contains " . num_uppercase($text1) . " uppercase characters";
+    echo "<b>" . $text1 . "</b>" . " contains " . num_uppercase($text1) . " uppercase characters";
 } else {
     $text1 . " is all lowercase";
 }
@@ -31,7 +31,7 @@ echo "<br>";
 
 $text2 = "EG3753 OSWSD";
 if (num_uppercase($text2)) {
-    echo $text2 . " contains " . num_uppercase($text2) . " uppercase characters";
+    echo "<b>" . $text2 . "</b>" . " contains " . num_uppercase($text2) . " uppercase characters";
 } else {
     $text2 . " is all lowercase";
 }
@@ -39,7 +39,7 @@ echo "<br>";
 
 $text3 = "is very interesting";
 if (num_uppercase($text3)) {
-    echo $text3 . " contains " . num_uppercase($text3) . " uppercase characters";
+    echo "<b>" . $text3 . "</b>" . " contains " . num_uppercase($text3) . " uppercase characters";
 } else {
     echo $text3 . " is all lowercase";
 }
