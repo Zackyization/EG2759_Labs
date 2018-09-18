@@ -27,36 +27,38 @@
     <p><a href="XX_185563R_Lab4_assign1.php?id=SF">San Francisco</a></p>
     <p><a href="XX_185563R_Lab4_assign1.php?id=NY">New York</a></p>
 
-    <hr>
-
 <?php
+if (isset($_GET['id'])) {
+
+    echo "<hr>";
+
     switch ($_GET['id']) {
         case "P":
             $title = "Paris";
-            $img   = "images/eiffel.jpg";
+            $img = "images/eiffel.jpg";
             break;
 
         case "L":
             $title = "London";
-            $img   = "images/bigben.jpg";
+            $img = "images/bigben.jpg";
             break;
 
         case "SF":
             $title = "San Francisco";
-            $img   = "images/golden_gate.jpg ";
+            $img = "images/golden_gate.jpg ";
             break;
 
         case "NY":
             $title = "New York";
-            $img   = "images/liberty.jpg";
+            $img = "images/liberty.jpg";
             break;
     }
 
-//LEFT OFF HERE
-
+    echo "<h2>$title</h2>";
+    echo "<img src='$img' width='165' height='250'>";
+}
 ?>
 
-    <h2><?php echo $title; ?></h2>
 </body>
 
 </html>
