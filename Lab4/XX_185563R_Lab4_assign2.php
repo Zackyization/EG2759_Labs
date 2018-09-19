@@ -75,7 +75,7 @@
         <br>
 
         <label>My preferred city is </label>
-        <select>
+        <select multiple>
             <option value="London">London</option>
             <option value="Paris">Paris</option>
             <option value="Rome">Rome</option>
