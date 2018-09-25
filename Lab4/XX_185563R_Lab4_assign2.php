@@ -9,17 +9,17 @@
 
     <style>
         label {
-        display: inline-block;
-        float: left;
-        clear: left;
-        width: 150px;
-        text-align: left;
-    }
+            display: inline-block;
+            float: left;
+            clear: left;
+            width: 150px;
+            text-align: left;
+        }
     
-    input {
-        margin-bottom: 5px;
-    }
-</style>
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,19 +52,19 @@
         <br>
 
         <label>Address:</label>
-        <inpu name="address" type="text" required>
+        <input name="address" type="text" required>
 
             <br>
 
             <label>Gender:</label>
-            <input type="radio" value="male">Male
-            <input type="radio" value="female">Female
+            <input name="gender" type="radio" value="male">Male
+            <input name="gender" type="radio" value="female">Female
 
             <br>
             <br>
 
             <label>Age Group:</label>
-            <select>
+            <select name="age">
                 <option value="Below 16">Below 16</option>
                 <option value="16-20">16-20</option>
                 <option value="21-30">21-30</option>
@@ -76,7 +76,7 @@
             <br>
 
             <label>My preferred city is </label>
-            <select multiple>
+            <select name="city" multiple>
                 <option value="London">London</option>
                 <option value="Paris">Paris</option>
                 <option value="Rome">Rome</option>
@@ -106,19 +106,13 @@
     </script>
 
     <?php
-if (isset($_POST['username'])) {
-    echo "<p>Hello user " . $_POST['username'] . "</p>";
-    echo "<p>Your name is" . $_POST['name'] . "</p>";  
-    
-    echo "<p>Hello user . $_POST['username'] . </p>";
-    //LEFT OFF HERE
-    echo "<p>You live in
-        <?php echo $_POST['address'];?>
-    </p>"
-    echo "<p>You are a " . $_POST['gender'] . " of age " . $_POST['age'] . "</p>";
-    echo <p>Your favourite city is
-        <?php echo $_POST['city'];?>
-    </p>
+    if (isset($_POST['username'])) {
+        echo "<p>Hello user " . $_POST['username'] . "</p>";
+        echo "<p>Your name is " . $_POST['name'] . "</p>";  
+        echo "<p>Hello user " . $_POST['username'] . "</p>";
+        echo "<p>You live in " . $_POST['address'] . "</p>";
+        echo "<p>You are a " . $_POST['gender'] . " of age " . $_POST['age'] . "</p>";
+        echo "<p>Your favourite city is " . $_POST['city'] . "</p>";
     }
     ?>
 </body>
