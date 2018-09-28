@@ -103,6 +103,14 @@
             registrationForm.style.visibility = "hidden";
             return true;
         }
+        var registrationForm = document.getElementById('registration_form');
+
+
+        if (registrationForm.addEventListener) {
+            registrationForm.addEventListener("submit", callback, false);  //Modern browsers
+        } else if (registrationForm.attachEvent) {
+            registrationForm.attachEvent('onsubmit', callback);            //Old IE
+        }
     </script>
 
     <?php
