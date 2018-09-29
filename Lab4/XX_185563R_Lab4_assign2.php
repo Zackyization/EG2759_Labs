@@ -95,7 +95,7 @@
             var errorMessage = document.getElementById('error_message');
             var registrationForm = document.getElementById('registration_form');
 
-            if (password != confirmPassword) {
+            if (password != confirmPassword) {5
                 errorMessage.hidden = false;
                 return false;
             }
