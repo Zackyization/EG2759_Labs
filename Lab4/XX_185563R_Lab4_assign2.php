@@ -103,6 +103,7 @@
             registrationForm.style.visibility = "hidden";
             return true;
         }
+        
         var registrationForm = document.getElementById('registration_form');
 
 
