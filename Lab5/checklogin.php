@@ -4,7 +4,7 @@
 
     $conn = mysqli_connect("127.0.0.1", "root", "", "db185563R");
 
-    $sql = "SELECT * FROM userinfo WHERE name = '$u' and passwd='$p'";
+    $sql = "SELECT * FROM userinfo WHERE name = '$u' and pass ='$p'";
     $search_result = mysqli_query($conn,$sql); //search table NOW!
 
     //Return the number of rows in search result

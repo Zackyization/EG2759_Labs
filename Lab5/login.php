@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="checklogin.php">
+    <form action="checklogin.php" method="post">
         <label>Username:</label>
         <input name="uname" type="text">
 
