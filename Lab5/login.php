@@ -21,6 +21,10 @@
         <br>
 
         <button type="submit">Login</button>
+        <?php 
+        if ()
+        echo "<b>Invalid username or password</b>"; 
+        ?>
     </form>
 </body>
 
