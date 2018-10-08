@@ -21,9 +21,11 @@
         <br>
 
         <button type="submit">Login</button>
-        <?php 
-        if ()
-        echo "<b>Invalid username or password</b>"; 
+
+        <?php
+        if (isset($_GET['ERROR'])) {
+            echo "<b>Invalid username or password</b>";
+        }
         ?>
     </form>
 </body>

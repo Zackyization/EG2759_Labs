@@ -16,6 +16,7 @@
     }
     else {
         //User record is NOT found in the userinfo table
-        header("Location:login.php");
+        // $_SERVER['ERROR'] = 1;
+        header("Location:login.php?ERROR=1");
     }
 ?>
