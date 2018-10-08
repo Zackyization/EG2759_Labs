@@ -4,10 +4,6 @@
     echo "The file size is " . $_FILES["fileToUpload"]["size"] . "<br>";
     echo "The file type is " . $_FILES["fileToUpload"]["type"] . "<br>";
 
-    // $target = "uploaded_files/" . $_FILES["fileToUpload"]["name"];
-
-    // move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target);
-
     date_default_timezone_set("Asia/Singapore");
 
     $timestamp = date("Ymd_His"); //Construct the timestamp
@@ -16,7 +12,7 @@
     $target = "uploaded_files/" . $timestamp . "_" . $_FILES["fileToUpload"]["name"];
 
     $allowedType = array("image/gif", "image/jpeg", "image/jpg", "image/png");
-    if (in_array($_FILES["fileToUpload"]["type"], $allowedType)) {
+    if (in_array($_FILES["fileToUpload"]["type"], $allowedType) && $_FILES["fileToUpload"]["size"] < 1000000) {
         echo "File type is acceptable <br>"; //proceed to upload
         $result = move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target);
 

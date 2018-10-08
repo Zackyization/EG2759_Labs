@@ -23,10 +23,8 @@
 
     date_default_timezone_set("Asia/Singapore");
 
-    $timestamp = date("Ymd_His"); //Construct the timestamp
-
-    //Add timestamp at the filename
-    $target = "uploaded_files/" . $timestamp . "_" . $_FILES["fileToUpload"]["name"];
+    $prefix = rand(1, 99999);
+    $target = "uploaded_files/" . $prefix . "_" . $_FILES["fileToUpload"]["name"];
 
     $allowedType = array("image/gif", "image/jpeg", "image/jpg", "image/png");
     if (in_array($_FILES["fileToUpload"]["type"], $allowedType) && $_FILES["fileToUpload"]["size"] < 1000000) {
