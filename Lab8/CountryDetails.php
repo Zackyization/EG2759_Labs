@@ -27,21 +27,31 @@
 
     <span>
     <img src="<?php echo " flag_images/" . $country['Name'] . ".png" ; ?>">
-        <div style="display:inline;">
+        <div>
             <label>Population: </label>
             <?php echo $country['Population'];?>
             
             <br>
 
             <label>Size: </label>
-            <?php echo $country['SurfaceArea'];?>
+            <?php echo number_format($country['SurfaceArea']) . " km<sup>2</sup>";?>
 
             <br>
 
             <label>Life Expectancy: </label>
             <?php echo $country['LifeExpectancy'];?>
 
-            <!-- LEFT OFF HERE, lab8 page 3 -->
+            <br>
+
+            <label>Cost: </label>
+            <?php echo "$" . number_format($country['GNP']); ?>
+
+            <form method="POST" action="insert_record.php">
+                <button type="submit">Add to cart</button>
+                <input hidden value="<?php echo $country['Name'] ?>" type="text" name="ctry">
+                <input hidden value="<?php echo $country['GNP'] ?>" type="text" name="cost">
+                <input hidden value="<?php echo $country['image_file'] ?>" type="text" name="imgname">
+            </form>
         </div>
 
     </span>
