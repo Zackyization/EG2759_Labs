@@ -60,6 +60,16 @@
                         <button type="submit">Delete</button>
                         <input hidden type="text" name="cid" value="<?php echo $cart_items['id'] ?>">
                     </form>
+
+                    <form method="POST" action="updatecart.php">
+                        <button type="submit">Update Qty</button>
+                        <input hidden name="cid" value="<?php echo $cart_items['id'] ?>">
+                        
+                        <br>
+
+                        <label>New Quantity :</label>
+                        <input name="newQty">
+                    </form>
                 </td>
             </tr>
             <?php } ?>
