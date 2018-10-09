@@ -43,24 +43,39 @@
         <tbody>
             <?php while ($cart_items = mysqli_fetch_assoc($mycart)) {?>
             <tr>
-                <td><?php echo $cart_items['cname'] ?></td>
-                <td>&dollar;<?php echo $cart_items['ccost'] ?></td>
-                <td><?php echo $cart_items['qty'] ?></td>
-                <td>&dollar;<?php echo $cart_items['ccost'] * $cart_items['qty'] ?></td>
+                <td>
+                    <?php echo $cart_items['cname'] ?>
+                </td>
+                <td>&dollar;
+                    <?php echo $cart_items['ccost'] ?>
+                </td>
+                <td>
+                    <?php echo $cart_items['qty'] ?>
+                </td>
+                <td>&dollar;
+                    <?php echo $cart_items['ccost'] * $cart_items['qty'] ?>
+                </td>
+                <td>
+                    <form method="POST" action="deletecart.php">
+                        <button type="submit">Delete</button>
+                        <input hidden type="text" name="cid" value="<?php echo $cart_items['id'] ?>">
+                    </form>
+                </td>
             </tr>
             <?php } ?>
         </tbody>
     </table>
-    <span>Grand Total: &dollar;
-        <?php //TODO:Calculate the total cost 
-        $totalCost = 0;
-            while ($cart_items = mysqli_fetch_assoc($mycart)) {
-                $totalCost += ($cart_items['ccost'] * $cart_items['qty']);
+    <div>Grand Total: &dollar;
+        <?php
+            $cart = mysqli_query($conn, $sql);
+            $totalCost = 0;
+            while ($items = mysqli_fetch_assoc($cart)) {
+                $totalCost += $items['ccost'] * $items['qty'];
             }
-        
-            echo $totalCost;
+            
+            echo number_format($totalCost);
         ?>
-    </span>
+    </div>
 </body>
 
 </html>
