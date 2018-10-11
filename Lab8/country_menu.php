@@ -55,7 +55,7 @@ $continent_list = mysqli_query($conn, $sql_continent);
       <th scope="col">Population</th>
     </tr>
 
-    <?php While ( $one_country = mysqli_fetch_assoc($country_list)  ) { ?>
+    <?php while ( $one_country = mysqli_fetch_assoc($country_list)  ) { ?>
 
     <tr>
       <td>
