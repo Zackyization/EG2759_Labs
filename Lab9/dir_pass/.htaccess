@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "By Invitation Only"
+AuthUserFile I:\wamp64\www\WS185563R\Lab9\password_file
+Require user jackye davidl

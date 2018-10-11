@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Access Only by Special Users"
+AuthUserFile I:\wamp64\www\WS185563R\Lab9\password_file
+AuthGroupFile I:\wamp64\www\WS185563R\Lab9\group_file.txt
+Require group specialusers
