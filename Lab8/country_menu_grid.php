@@ -13,10 +13,19 @@
         }
 
         .countryBox {
-            border-color: green;
+            border-color: lightgreen;
             border-style: solid;
-            border-width: 1px;
+            border-width: 3px;
+            display: inline-block;
+            padding: 3px;
+            margin-right: 2%;
+            margin-bottom: 2%;
         }
+
+        .countryBox p {
+            margin: 0;
+        }
+        
     </style>
 
     <?php
@@ -62,12 +71,23 @@ $continent_list = mysqli_query($conn, $sql_continent);
         <input type="submit" name="submit" id="submit" value="Show Countries">
     </form>
 
+    <?php while ($one_country = mysqli_fetch_assoc($country_list)) { ?>
     <div class="countryBox">
-        <p>Code: NLD</p>
-        <p>Country: Netherlands</p>
-
-        <!-- LEFT OFF HERE, Work on the challenge from lab8 -->
+        <p>Code:
+            <?php echo $one_country['Code']; ?>
+        </p>
+        <p>Country:
+            <?php echo "<a href='CountryDetails.php?id=" . $one_country['Code'] . "'>" . $one_country['Name'] . "</a>"; ?>
+        </p>
+        <p>Continent:
+            <?php echo $one_country['Continent']; ?>
+        </p>
+        <p>Size:
+            <?php echo $one_country['SurfaceArea']; ?>
+        </p>
     </div>
+
+    <?php } ?>
 </body>
 
 </html>

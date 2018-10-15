@@ -1,0 +1,2 @@
+specialusers: user1 user3 user5
+superusers: admin user3
