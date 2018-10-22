@@ -141,12 +141,12 @@ if (isset($_POST['appleQty'])) {
     echo $mango . " mangos<br>";
     echo $pear . " pears<br><br>";
 
-    echo "<h3>Total Quantity : $totalQty</h3>";
-    echo "<h3>Total Price : $" . number_format($totalPrice, 2) . "</h3>"; //number_format 2 decimal place
-    echo "<h3>You Saved ($discount%) : $" . number_format($save, 2) . "</h3>";
-    echo "<h3>Price After Discount : $" . number_format($priceAftDiscount, 2) . "</h3>";
-    echo "<h3>Total Price(GST) : $" . number_format($GST, 2) . "</h3>";
-    echo "<h3>You have chosen to collect your goods $msg</h3>";
+    echo "<p>Total Quantity : $totalQty</p>";
+    echo "<p>Total Price : $" . number_format($totalPrice, 2) . "</p>"; //number_format 2 decimal place
+    echo "<p>You Saved ($discount%) : $" . number_format($save, 2) . "</p>";
+    echo "<p>Price After Discount : $" . number_format($priceAftDiscount, 2) . "</p>";
+    echo "<p>Total Price(GST) : $" . number_format($GST, 2) . "</p>";
+    echo "<p>You have chosen to collect your goods $msg</p>";
 }
 ?>
 
