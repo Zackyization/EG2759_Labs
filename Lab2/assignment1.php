@@ -10,40 +10,7 @@
     <h3>Order Status</h3>
 
     <form method="POST" action="#">
-        Apple: <select name="appleQty">
-            <?php 
-                $range = range (0,10);
-                foreach ($range as $q) {
-                    echo "<option value='$q'>$q</option>";
-                }
-            ?>
-        </select>
-        <br> Orange: <select name="orangeQty">
-            <?php 
-                $range = range (0,10);
-                foreach ($range as $q) {
-                    echo "<option value='$q'>$q</option>";
-                }
-            ?>
-        </select>
-        <br> Mango: <select name="mangoQty">
-            <?php 
-                $range = range (0,10);
-                foreach ($range as $q) {
-                    echo "<option value='$q'>$q</option>";
-                }
-            ?>
-        </select>
-        <br> Pear: <select name="pearQty">
-            <?php 
-                $range = range (0,10);
-                foreach ($range as $q) {
-                    echo "<option value='$q'>$q</option>";
-                }
-            ?>
-        </select>
-        <br>
-        <br> Time to Deliver: <select name="TOD">
+        Time to Deliver: <select name="TOD">
             <option value="T1">Morning</option>
             <option value="T2">Afternoon</option>
             <option value="T3" selected>Anytime</option>
@@ -56,11 +23,11 @@
     <p>Your order is as follows</p>
     <?php
 
-if (isset($_POST['appleQty'])) {
-    $apple = $_POST["appleQty"]; //get values from form
-    $orange = $_POST["orangeQty"];
-    $mango = $_POST["mangoQty"];
-    $pear = $_POST["pearQty"];
+if (isset($_POST["TOD"])) {
+    $apple = 1;
+    $orange = 5;
+    $mango = 2;
+    $pear = 5;
 
     //delivery
     $TimeOfDay = $_POST["TOD"]; //t1 t2 t3 t4
@@ -112,8 +79,8 @@ else {
 }
 ?>
 
-<?php
-if (isset($_POST['appleQty'])) {
+    <?php
+if (isset($_POST['TOD'])) {
     echo $apple . " apples<br>";
     echo $orange . " oranges<br>";
     echo $mango . " mangos<br>";
@@ -130,4 +97,3 @@ if (isset($_POST['appleQty'])) {
 </body>
 
 </html>
-
