@@ -22,10 +22,10 @@
     </table>
 
     <h1>Choose a Tour (City)</h1>
-    <p><a href="XX_185563R_Lab4_assign1.php?id=P">Paris</a></p>
-    <p><a href="XX_185563R_Lab4_assign1.php?id=L">London</a></p>
-    <p><a href="XX_185563R_Lab4_assign1.php?id=SF">San Francisco</a></p>
-    <p><a href="XX_185563R_Lab4_assign1.php?id=NY">New York</a></p>
+    <p><a href="M5_185563R_Lab4_assign1.php?id=P">Paris</a></p>
+    <p><a href="M5_185563R_Lab4_assign1.php?id=L">London</a></p>
+    <p><a href="M5_185563R_Lab4_assign1.php?id=SF">San Francisco</a></p>
+    <p><a href="M5_185563R_Lab4_assign1.php?id=NY">New York</a></p>
 
 <?php
 if (isset($_GET['id'])) {
