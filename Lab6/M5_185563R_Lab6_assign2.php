@@ -45,7 +45,7 @@
         <span>Select Continent:
             <?php
                     while ($one_continent = mysqli_fetch_assoc($continent_list)) {
-                        echo "<a href=" . "country_hyperlink.php?Cont=" . urlencode($one_continent['Continent']) .  ">" . $one_continent['Continent'] . "</a>";
+                        echo "<a href=" . "M5_185563R_Lab6_assign2.php?Cont=" . urlencode($one_continent['Continent']) .  ">" . $one_continent['Continent'] . "</a>";
                         echo "&nbsp;";
                     }
 ?>
