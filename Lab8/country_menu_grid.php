@@ -29,7 +29,6 @@
     </style>
 
     <?php
-//TODO: Make a grid of the country info page
 session_start();
 
 $filter = "";
