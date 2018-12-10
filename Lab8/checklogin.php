@@ -16,7 +16,8 @@ if ($userfound >= 1) {
 
     // User record is found in the userinfo table
     header("Location:country_menu.php");
-} else {
+} 
+else {
 // User record is NOT found in the userinfo table
     header("Location:login.php"); // go back to login page
 }
